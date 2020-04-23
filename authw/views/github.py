@@ -69,7 +69,7 @@ def callback(request):
             user.email = email
             user.save()
     except user_model.DoesNotExist:
-        user = user_model.objects.create_user(username, email, first_name=first_name, last_name=last_name)
+        user = user_model.objects.create_user(username, email)
 
     # set signed in state
     auth.login(request, user)

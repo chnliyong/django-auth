@@ -25,7 +25,7 @@ class Client:
         self.callback_url = callback_url
 
     def get_authn_url(self, state, **kwargs):
-        scope = kwargs['scope'] if 'scope' in kwargs else 'read:user'
+        scope = kwargs['scope'] if 'scope' in kwargs else 'user:email'
         query = {
             'client_id': self.client_id,
             'scope': scope,
