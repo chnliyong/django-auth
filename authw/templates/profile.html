@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Profile</title>
+    </head>
+    <body>
+        <div style="float: right;"><a href="{% url 'account_logout' %}">Logout</a></div>
+        <table>
+            <tbody>
+                <tr>
+                    <th>Username</th>
+                    <td>{{ account.username }}</td>
+                </tr>
+                <tr>
+                    <th>First Name</th>
+                    <td>{{ account.first_name }}</td>
+                </tr>
+                <tr>
+                    <th>Last Name</th>
+                    <td>{{ account.last_name }}</td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td>{{ account.email }}</td>
+                </tr>
+                <tr>
+                    <th>Staff</th>
+                    <td>{{ account.is_staff }}</td>
+                </tr>
+                <tr>
+                    <th>Superuser</th>
+                    <td>{{ account.is_superuser }}</td>
+                </tr>
+                <tr>
+                    <th>Last Login</th>
+                    <td>{{ account.last_login }}</td>
+                </tr>
+                <tr>
+                    <th>Joined At</th>
+                    <td>{{ account.date_joined }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
